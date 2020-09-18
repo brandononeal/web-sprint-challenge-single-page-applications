@@ -29,7 +29,7 @@ describe("Lambda Eats", () => {
 
   it("Form can be submitted", () => {
     nameInput().type("Brandon");
-    sizeDrowdown().select("large");
+    sizeDrowdown().select("Large");
     olivesCheckbox().click();
     mushroomsCheckbox().click();
     jalapenosCheckbox().click();
