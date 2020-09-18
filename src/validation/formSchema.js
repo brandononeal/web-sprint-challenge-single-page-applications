@@ -5,7 +5,7 @@ export default yup.object().shape({
   pizzaSize: yup
     .string()
     .oneOf(
-      ["small", "medium", "large", "extraLarge"],
+      ["Small", "Medium", "Large", "Extra Large"],
       "Pizza size is required"
     ),
   olives: yup.boolean(),

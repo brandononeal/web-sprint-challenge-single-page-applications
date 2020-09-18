@@ -108,7 +108,6 @@ export default function Form() {
             onChange={change}
           />
           <br />
-
           <label>Pizza Size: </label>
           <select
             name="pizzaSize"
@@ -116,13 +115,12 @@ export default function Form() {
             onChange={change}
           >
             <option value="">--- select size ---</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="extraLarge">Extra Large</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Extra Large">Extra Large</option>
           </select>
           <br />
-
           <h4>Toppings</h4>
           <label>
             Olives{" "}
@@ -134,7 +132,6 @@ export default function Form() {
             />
           </label>
           <br />
-
           <label>
             Mushrooms{" "}
             <input
@@ -145,7 +142,6 @@ export default function Form() {
             />
           </label>
           <br />
-
           <label>
             Jalapenos{" "}
             <input
@@ -156,7 +152,6 @@ export default function Form() {
             />
           </label>
           <br />
-
           <label>
             Extra Cheese{" "}
             <input
@@ -167,7 +162,6 @@ export default function Form() {
             />
           </label>
           <br />
-
           <h4>Special Instructions</h4>
           <input
             type="text"
@@ -178,30 +172,29 @@ export default function Form() {
           />
           <br />
           <br />
-
           <button disabled={disabled}>Add to Order</button>
 
-          {/* <div className="order-container">
+          <div className="order-container">
             {orders.map((order) => {
               if (!order) {
                 return <h3>Working on finding your order...</h3>;
               }
-              console.log(order);
               return (
                 <div className="order-details">
-                  <h3>{order.name}</h3>
-                  <p>Size: {order.pizzaSize}</p>
+                  <h2>Your pizza is on it's way!</h2>
+                  <h4>Size:</h4>
+                  <p>{order.pizzaSize}</p>
                   <h4>Toppings:</h4>
-                  <p>{order.olives}</p>
-                  <p>{order.mushrooms}</p>
-                  <p>{order.jalapenos}</p>
-                  <p>{order.extraCheese}</p>
+                  <p>{order.toppings[0]}</p>
+                  <p>{order.toppings[1]}</p>
+                  <p>{order.toppings[2]}</p>
+                  <p>{order.toppings[3]}</p>
                   <h4>Delivery Instructions:</h4>
                   <p>{order.instructions}</p>
                 </div>
               );
             })}
-          </div> */}
+          </div>
         </div>
       </form>
     </div>
